@@ -1,8 +1,7 @@
-from .models import Task
 from django.contrib import admin
+from .models import Task
 
 class TaskAdmin(admin.ModelAdmin):
-    list_display =('task','is_completed','updated_at')
-    search_fields = ('task',)
+    list_display = ("id", "task", "completed", "created_at")
 
-admin.site.register(Task,TaskAdmin)
+admin.site.register(Task, TaskAdmin)
